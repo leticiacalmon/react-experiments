@@ -26,30 +26,25 @@ module.exports = [
     test: /\.(jpe?g|png|gif)$/,
     use: [
       getUrlLoader(),
-      imgLoader
+      imgLoader,
     ]
   },
   {
     test: /\.svg(\?v=\d+\.\d+\.\d+)?(\?(\w|\d)+)?(\#(\w|\d)+)?$/,
-    loader: 'svg-url-loader',
-    options: {
-      stripdeclarations: true,
-    },
+    use:[
+      getUrlLoader('image/svg+xml', 100000),
+    ],
   },
   {
-    test: /\.woff(\?v=\d+\.\d+\.\d+)?(\?(\w|\d)+)?(\#(\w|\d)+)?$/,
-    loader: getUrlLoader('application/font-woff')
-  },
-  {
-    test: /\.woff2(\?v=\d+\.\d+\.\d+)?(\?(\w|\d)+)?(\#(\w|\d)+)?$/,
-    loader: getUrlLoader('application/font-woff')
+    test: /\.woff(2)?(\?v=\d+\.\d+\.\d+)?(\?(\w|\d)+)?(\#(\w|\d)+)?$/,
+    loader: getUrlLoader('application/font-woff'),
   },
   {
     test: /\.ttf(\?v=\d+\.\d+\.\d+)?(\?(\w|\d)+)?(\#(\w|\d)+)?$/,
-    loader: getUrlLoader('application/octet-stream')
+    loader: getUrlLoader('application/octet-stream'),
   },
   {
     test: /\.eot(\?v=\d+\.\d+\.\d+)?(\?(\w|\d)+)?(\#(\w|\d)+)?$/,
-    loader: fileLoader
+    loader: fileLoader,
   }
 ];

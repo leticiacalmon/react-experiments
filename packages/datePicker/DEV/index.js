@@ -2,12 +2,43 @@ import React, {
   Component,
 } from 'react';
 import { render } from 'react-dom';
+import {  } from 'redux';
+import {
+  Provider,
+  connect,
+} from 'react-redux';
+import {
+  createStore,
+  combineReducers,
+} from 'redux'
 import { observer } from 'mobx-react';
 import DatePicker, {
   DatePickerModel,
+  createReduxStoreSection,
 } from '../src';
 
-// const DatePickerConnected = observer(DatePicker);
+const {
+  reducers,
+  mapDispatchToProp,
+} = createReduxStoreSection('datePicker');
+
+function mapStateToProps({ datePicker }, ownProps) {
+  return {
+    ...datePicker,
+    ...ownProps,
+  };
+}
+
+const ConnectedDatePicker = connect(
+  mapStateToProps,
+  mapDispatchToProp,
+)(DatePicker);
+
+const store = createStore(
+  combineReducers({
+    ...reducers,
+  }),
+);
 
 // app
 const div = document.createElement('div');
@@ -26,15 +57,25 @@ document.body.appendChild(div);
       dateModel,
     } = this.props;
     return (
-      <div style={{ display: 'flex', flexDirection: 'column', padding: '60px' }}>
-        <DatePicker
-          shouldKeepCalendarWhileSelecting
-          hasWeekdays
-          {... dateModel}
-          onChange={dateModel.onChange}
-          onTextChange={dateModel.onTextChange}
-          onRestore={dateModel.onRestore}
-        />
+      <div style={{ display: 'flex', flexDirection: 'row', padding: '60px' }}>
+        <div style={{ width: '320px', display: 'flex', flexDirection: 'column' }}>
+          <DatePicker
+            shouldKeepCalendarWhileSelecting
+            hasWeekdays
+            {... dateModel}
+            onChange={dateModel.onChange}
+            onTextChange={dateModel.onTextChange}
+            onRestore={dateModel.onRestore}
+          />
+        </div>
+        <div style={{ marginLeft: '120px', width: '320px', display: 'flex', flexDirection: 'column' }}>
+          <Provider store={store}>
+            <ConnectedDatePicker
+              shouldKeepCalendarWhileSelecting
+              hasWeekdays
+            />
+          </Provider>
+        </div>
       </div>
     );
   }
