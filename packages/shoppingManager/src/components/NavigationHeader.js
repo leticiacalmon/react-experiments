@@ -12,11 +12,7 @@ import logo from './Logo/dogPaw.svg';
 // const logo = null;
 
 const Logo = () => (
-  <img className={styles.logoPicture} src={logo} title="Shopping Manager Logo" />
-  // <i className={styles.logoPicture}>{logo}</i>
-  // <a href="/#/">
-  //   <i className={styles.logoPicture} />
-  // </a>
+  <Icon type="flat" size="4" className={styles.logo}>animal prints</Icon>
 );
 
 export default class NavigationHeader extends PureComponent {

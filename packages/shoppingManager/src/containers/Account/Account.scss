@@ -1,8 +1,6 @@
 @import '~daniloster-base-styles';
 
 .form {
-  font-family: $fontFamily;
-  text-rendering: optimizeLegibility;
   @include grid(1fr, 2fr auto auto auto auto auto);
 
   * {

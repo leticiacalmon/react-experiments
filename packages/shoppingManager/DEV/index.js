@@ -11,6 +11,13 @@ link.crossorigin = 'anonymous';
 
 document.head.appendChild(link);
 
+const robotoFont = document.createElement('link');
+robotoFont.href = 'https://fonts.googleapis.com/icon?family=Roboto:regular,thin';
+robotoFont.rel = 'stylesheet';
+robotoFont.crossorigin = 'anonymous';
+
+document.head.appendChild(robotoFont);
+
 // app
 const div = document.createElement('div');
 

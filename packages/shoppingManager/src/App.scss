@@ -1,5 +1,11 @@
 @import '~daniloster-base-styles';
 
+html, body {
+  font-family: 'Roboto', sans-serif; 
+  text-rendering: optimizeLegibility;
+  font-weight: lighter;
+}
+
 .container {
 
 }

@@ -4,14 +4,25 @@
   font-weight: 400;
   src: url(./fonts/MaterialIcons-Regular.eot); /* For IE6-8 */
   src: local('Material Icons'),
-    local('MaterialIcons-Regular'),
-    url(./fonts/MaterialIcons-Regular.woff2) format('woff2'),
-    url(./fonts/MaterialIcons-Regular.woff) format('woff'),
-    url(./fonts/MaterialIcons-Regular.ttf) format('truetype');
+  local('MaterialIcons-Regular'),
+  url(./fonts/MaterialIcons-Regular.woff2) format('woff2'),
+  url(./fonts/MaterialIcons-Regular.woff) format('woff'),
+  url(./fonts/MaterialIcons-Regular.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: "Flaticon";
+  src: url("./fonts/Flaticon.eot");
+  src: url("./fonts/Flaticon.eot?#iefix") format("embedded-opentype"),
+       url("./fonts/Flaticon.woff") format("woff"),
+       url("./fonts/Flaticon.ttf") format("truetype"),
+       url("./fonts/Flaticon.svg#Flaticon") format("svg");
+  font-weight: normal;
+  font-style: normal;
 }
 
 :global {
-  [class^="icon"], [class*=" icon"] {
+  [class^="icon-material"], [class*=" icon-material"] {
     /* use !important to prevent issues with browser extensions that change fonts */
     font-family: 'Material Icons';
     font-weight: normal;
@@ -68,4 +79,91 @@
       transform: rotate(359deg);
     }
   }
+  
+  .icon-flaticon:before{
+    display: inline-block;
+    font-family: "Flaticon";
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    line-height: 1;
+    text-decoration: inherit;
+    text-rendering: optimizeLegibility;
+    text-transform: none;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+  }
+  
+  .bell-toy:before { content: "\f100"; }
+  .pet-solution:before { content: "\f101"; }
+  .brush-1:before { content: "\f102"; }
+  .leash-3:before { content: "\f103"; }
+  .hamster-water:before { content: "\f104"; }
+  .pet-food-1:before { content: "\f105"; }
+  .bird-house-1:before { content: "\f106"; }
+  .pet-shampoo-1:before { content: "\f107"; }
+  .carrot:before { content: "\f108"; }
+  .brush:before { content: "\f109"; }
+  .fish-food:before { content: "\f10a"; }
+  .cat-toy:before { content: "\f10b"; }
+  .leash-2:before { content: "\f10c"; }
+  .comb:before { content: "\f10d"; }
+  .snake:before { content: "\f10e"; }
+  .pet-drops:before { content: "\f10f"; }
+  .hamster:before { content: "\f110"; }
+  .bone:before { content: "\f111"; }
+  .rabbit:before { content: "\f112"; }
+  .turtle:before { content: "\f113"; }
+  .pet-food:before { content: "\f114"; }
+  .cat-food:before { content: "\f115"; }
+  .leash-1:before { content: "\f116"; }
+  .ball:before { content: "\f117"; }
+  .bird-house:before { content: "\f118"; }
+  .parrot:before { content: "\f119"; }
+  .mouse-toy:before { content: "\f11a"; }
+  .dog-food:before { content: "\f11b"; }
+  .leash:before { content: "\f11c"; }
+  .hedgehog:before { content: "\f11d"; }
+  .dog-with-owner:before { content: "\f11e"; }
+  .cat-cage:before { content: "\f11f"; }
+  .bird:before { content: "\f120"; }
+  .dog-bitting-a-stick-playing-with-a-man:before { content: "\f121"; }
+  .pet-shop:before { content: "\f122"; }
+  .dog-with-first-aid-kit-bag:before { content: "\f123"; }
+  .medical-kit:before { content: "\f124"; }
+  .dog-smelling-a-bone:before { content: "\f125"; }
+  .duck:before { content: "\f126"; }
+  .dog-and-pets-house:before { content: "\f127"; }
+  .injection:before { content: "\f128"; }
+  .dog-and-a-man:before { content: "\f129"; }
+  .dog-playing-with-a-man:before { content: "\f12a"; }
+  .scissors:before { content: "\f12b"; }
+  .dog-puppy-and-his-owner-looking-to-opposite-directions:before { content: "\f12c"; }
+  .dog-1:before { content: "\f12d"; }
+  .man-combing-a-dog:before { content: "\f12e"; }
+  .squirrel:before { content: "\f12f"; }
+  .pet-shampoo:before { content: "\f130"; }
+  .dog-learning-man-instructions:before { content: "\f131"; }
+  .fishes:before { content: "\f132"; }
+  .paws-up-dog-playing-with-a-man:before { content: "\f133"; }
+  .pet-house:before { content: "\f134"; }
+  .dog-shitting:before { content: "\f135"; }
+  .dog-puppy-sitting-in-front-of-his-man:before { content: "\f136"; }
+  .dog:before { content: "\f137"; }
+  .cat-1:before { content: "\f138"; }
+  .dog-checked-by-a-veterinary:before { content: "\f139"; }
+  .dog-having-a-bubbles-bath:before { content: "\f13a"; }
+  .cat:before { content: "\f13b"; }
+  .man-throwing-a-disc-and-dog-jumping-to-catch-it:before { content: "\f13c"; }
+  .milk:before { content: "\f13d"; }
+  .fish:before { content: "\f13e"; }
+  .badge:before { content: "\f13f"; }
+  .man-carrying-a-dog-with-a-belt-to-walk:before { content: "\f140"; }
+  .fishbones:before { content: "\f141"; }
+  .man-on-his-knees-to-cuddle-his-dog:before { content: "\f142"; }
+  .dog-with-belt-walking-with-a-man:before { content: "\f143"; }
+  .animal-prints:before { content: "\f144"; }
+  .dog-in-front-of-a-man:before { content: "\f145"; }
 }
+

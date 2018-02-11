@@ -25,17 +25,15 @@
     ;
   }
 
-  .logoPicture {
+  .logo {
     width: 48px;
     height: 42px;
     line-height: 58px;
-    padding: 8px 4px;
+    padding: 0 7px;
     grid-area: logo;
     justify-items: start;
     align-items: center;
-    text-shadow: 2px 4px 6px $defaultColor, 0 0 0 $activeSecondaryColor, 2px 4px 6px $defaultColor;
-    color: $baseSecondaryColor;
-    fill: $baseSecondaryColor;
+    color: $defaultSecondaryColor;
   }
 
   .settings {

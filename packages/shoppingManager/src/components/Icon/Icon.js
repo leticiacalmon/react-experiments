@@ -3,7 +3,13 @@ import PropTypes from 'prop-types';
 import classnames from 'classnames';
 
 import styles from './Icon.scss';
+import MaterialIcon from './MaterialIcon'
+import FlatIcon from './FlatIcon'
 
+const typeIcons = {
+  material: MaterialIcon,
+  flat: FlatIcon,
+};
 /**
  * Icon
  * This is a facade for FontAwesome component "react-fa". It is
@@ -11,9 +17,9 @@ import styles from './Icon.scss';
  * be changed.
  * @param {object} props
  */
-const Icon = ({ className, name, pulse, spin, ...props }) => {
-  const finalClassName = classnames('icon', className, { [styles.pulse]: pulse });
-  return (<i className={finalClassName} {...props}>{name.replace(/(\s+)/igm, '_')}</i>);
+const Icon = ({ type, ...props }) => {
+  const ComponentIcon = typeIcons[type];
+  return (<ComponentIcon {...props} />);
 };
 
 Icon.propTypes = {
@@ -22,6 +28,7 @@ Icon.propTypes = {
   pulse: PropTypes.bool,
   size: PropTypes.string,
   spin: PropTypes.bool,
+  type: PropTypes.string
 };
 
 Icon.defaultProps = {
@@ -29,6 +36,7 @@ Icon.defaultProps = {
   pulse: false,
   size: '2',
   spin: false,
+  type: 'material'
 };
 
 export default Icon;
