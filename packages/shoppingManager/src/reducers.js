@@ -5,7 +5,7 @@ import {
 import {
   dropdownReducers,
   mapDispatchToPropsDropdownContainer,
-} from './containers/DropdownContainer';
+} from './containers/CrudContainer';
 import {
   itemsReducers,
   mapDispatchToPropsItems,

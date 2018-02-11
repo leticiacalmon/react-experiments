@@ -2,7 +2,7 @@ function UNDEFINED_INTERCEPTORS() {
   return {};
 }
 
-function getSubSection({ [storeSection]: section = {} }) {
+function getSubSection({ [storeSection]: section = {} }, ownProps) {
   return section[ownProps.entryType] || {};
 }
 
@@ -11,10 +11,10 @@ export default function createDropdownMapStateToProps(storeSection) {
    * ownProps required to have function getEndpoint({ id, ids, method })
    */
   return (state, { interceptors = UNDEFINED_INTERCEPTORS, ...ownProps }) => {
-    const subSection = getSubSection(state);
+    const subSection = getSubSection(state, ownProps);
     return {
       ...subSection,
-      ...interceptors(section[ownProps.entryType], ownProps),
+      ...interceptors(state[storeSection], subSection, ownProps),
       ...ownProps,
     };
   };

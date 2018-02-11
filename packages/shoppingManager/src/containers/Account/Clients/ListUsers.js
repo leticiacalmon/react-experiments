@@ -8,7 +8,7 @@ import classnames from 'classnames';
 import Button from '../../../components/Button';
 import Icon from '../../../components/Icon';
 
-import baseStyles from 'daniloster-base-styles/lib/base.scss';
+// import baseStyles from 'daniloster-base-styles/lib/base.scss';
 import crudStyles from '../../Crud/Crud.scss';
 import styles from '../Account.scss';
 
@@ -46,8 +46,8 @@ class UserRow extends PureComponent {
 
     const finalClassName = classnames(styles.row, {
       [className]: className,
-      [baseStyles.rowEven]: isEven,
-      [baseStyles.rowOdd]: !isEven,
+      // [baseStyles.rowEven]: isEven,
+      // [baseStyles.rowOdd]: !isEven,
     });
 
     return (

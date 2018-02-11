@@ -95,7 +95,7 @@
     "coverage": "lerna run coverage --since --concurrency 8",
     "check-coverage": "lerna run check-coverage --since --concurrency 8",
     "validate": "npm run coverage && npm run check-coverage",
-    "compile:watch": "lerna run compile --ignore daniloster-base-styles --parallel -- -- --watch",
+    "compile:watch": "lerna run compile --parallel -- -- --watch",
     "doc": "lerna run doc --parallel --concurrency 8"
   }
 }

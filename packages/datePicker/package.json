@@ -41,9 +41,9 @@
     "doc": "react-asciidoc-generator src --ignore node_modules,index.js,lib,dist,DEV,.nyc_output,coverage,mochawesome-reports,webpack.config.js --output COMPONENTS_INTERFACE.md"
   },
   "dependencies": {
-    "daniloster-base-styles": "^1.0.0",
-    "daniloster-if": "^1.0.0",
-    "daniloster-utils": "^1.0.0"
+    "daniloster-base-styles": "^1.1.0",
+    "daniloster-if": "^1.1.0",
+    "daniloster-utils": "^1.1.0"
   },
   "peerDependencies": {
     "mobx": "^3.3.0",
@@ -56,9 +56,6 @@
   "devDependencies": {
     "babel-cli": "6.26.0",
     "cross-env": "5.0.5",
-    "daniloster-base-styles": "^1.1.0",
-    "daniloster-if": "^1.1.0",
-    "daniloster-utils": "^1.1.0",
     "enzyme": "3.0.0",
     "eslint": "3.19.0",
     "mobx": "3.3.0",

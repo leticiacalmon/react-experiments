@@ -1,5 +1,5 @@
 import { createReducerFunction } from 'daniloster-utils';
-import createDropdownMapStateToProps from './createDropdownMapStateToProps';
+import createCrudMapStateToProps from './createCrudMapStateToProps';
 
 const STANDARD_NAME = 'dropdownContainer';
 export const INITIAL_STATE = {};
@@ -273,7 +273,7 @@ export default function createCrudReduxSection(
     [constants.UPDATE_ITEMS]: updateItemsReducer,
   };
 
-  const mapStateToProps = createDropdownMapStateToProps(namespace);
+  const mapStateToProps = createCrudMapStateToProps(namespace);
 
   return {
     initialState,
